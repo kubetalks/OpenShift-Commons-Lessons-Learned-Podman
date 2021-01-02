@@ -1,0 +1,45 @@
+---
+title: Secure Continuous Delivery with Podman, Buildah, Skopeo, Quay and UBI
+subtitle: "Best practices for building secure containers with Red Hat tools"
+author:
+- "Elif Mosessohn-Samedin, Lead DevOps Engineer, RHCA"
+- "Mihai Criveti, CTO & STSM, RHCA"
+date: \today
+
+abstract: |
+  A hands-on demonstration of lessons learned migrating from other container build tools to the RHEL container ecosystem.
+  We aim to explore a set of command-line tools that are able to operate without a container daemon, and namely: Buildah, Podman, Quay and Skopeo.
+  We will discuss a new set of open-source Container Management Tools starting from a hands-on demonstration.
+  In a nutshell, Buildah builds, Podman runs, Skopeo transfers container images and Quay provides private and public container registries.
+  Moreover, we will take a look at best practices for building images that can easily be integrated into a CI/CD Pipeline and
+  vulnerability scanning with Clair, thus replacing previous build tools in workflows.
+  Understand the impact of SELinux, namespaces and cgroups.
+  Move from docker-compose to Podman pods.
+  Build container images for OpenShift Container Platform. Develop and test Ansible Playbooks / Roles with Podman.
+keywords: podman, containers, quay, skopeo, buildah, ubi, clair, cloud, kubernetes, redhat, openshift
+description: |
+  Build secure container images with Red Hat Tools
+subject: Red Hat Container Tools
+category: presentation
+lang: en-US
+
+output: beamer_presentation
+aspectratio: "169"
+toc: true
+slide_level: 2
+incremental: false # Incremental bullets
+classoption: "aspectratio=169"
+dpi: 300
+
+theme: "metropolis"
+colortheme: "owl"
+sansfont: IBM Plex Sans
+monofont: IBM Plex Mono
+mainfont: IBM Plex Sans
+fontsize: 8pt
+highlight: tango
+
+logo: ./template/logo.png
+titlegraphic: ./template/frontpage.png
+section-titles: true
+---
