@@ -15,7 +15,7 @@ abstract: |
   vulnerability scanning with Clair, thus replacing previous build tools in workflows.
   Understand the impact of SELinux, namespaces and cgroups.
   Move from docker-compose to Podman pods.
-  Build container images for OpenShift Container Platform. Develop and test Ansible Playbooks / Roles with Podman.
+  Build container images for OpenShift Container Platform.
 keywords: podman, containers, quay, skopeo, buildah, ubi, clair, cloud, kubernetes, redhat, openshift
 description: |
   Build secure container images with Red Hat Tools
