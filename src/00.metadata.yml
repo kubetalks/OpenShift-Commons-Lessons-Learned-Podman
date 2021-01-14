@@ -1,6 +1,6 @@
 ---
 title: Secure Continuous Delivery with Podman, Buildah, Skopeo, Quay and UBI
-subtitle: "Best practices for building secure containers with Red Hat tools"
+subtitle: "Best Practices for Building Secure Containers with Red Hat Tools"
 author:
 - "Elif Mosessohn-Samedin, Lead DevOps Engineer, RHCA"
 - "Mihai Criveti, CTO & STSM, RHCA"
