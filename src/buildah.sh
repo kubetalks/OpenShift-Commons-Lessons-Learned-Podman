@@ -2,7 +2,7 @@
 # Mihai Criveti
 
 # Build the container image starting from kubetalks/httpd
-container=$(buildah from quay.io/kubetalks/ubi8)
+container=$(buildah from quay.io/kubetalks/httpd)
 
 # Install make and git
 buildah run ${container} dnf install -y make git
