@@ -2,7 +2,7 @@
 # Mihai Criveti
 
 # Build the container image starting from kubetalks/httpd
-container=$(buildah from quay.io/kubetalks/ubi8)
+container=$(buildah from quay.io/kubetalks/httpd)
 
 # Install make and git
 buildah run ${container} dnf install -y make git
@@ -11,6 +11,10 @@ buildah run ${container} dnf install -y make git
 wget https://github.com/jgm/pandoc/releases/download/2.9.2/pandoc-2.9.2-linux-amd64.tar.gz -O /tmp/pandoc.tar.gz
 (cd /tmp; tar zxf pandoc.tar.gz)
 buildah copy ${container} /tmp/pandoc-2.9.2/bin /usr/local/bin
+
+# Set the CMD and port
+buildah config --cmd '["/usr/sbin/httpd","-DFOREGROUND"]' ${container}
+buildah config --port 8080
 
 # Commit the image
 buildah commit ${container} quay.io/kubetalks/pandoc
