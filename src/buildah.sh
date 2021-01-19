@@ -12,9 +12,13 @@ wget https://github.com/jgm/pandoc/releases/download/2.9.2/pandoc-2.9.2-linux-am
 (cd /tmp; tar zxf pandoc.tar.gz)
 buildah copy ${container} /tmp/pandoc-2.9.2/bin /usr/local/bin
 
+# Copy the config
+buildah copy ${container} ./configs/cmd.sh /
+
 # Set the CMD and port
-buildah config --cmd '["/usr/sbin/httpd","-DFOREGROUND"]' ${container}
-buildah config --port 8080
+buildah config --cmd '["/cmd.sh"]' ${container}
+buildah config --port 8080 ${container}
+buildah config --label Name=pandoc --label Version=1.0 ${container}
 
 # Commit the image
 buildah commit ${container} quay.io/kubetalks/pandoc
