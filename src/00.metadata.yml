@@ -2,8 +2,8 @@
 title: "Lessons Learned Adopting RHEL Container Tools"
 subtitle: "Podman, Buildah, Quay, Skopeo, Clair and S2I"
 author:
-- "Mihai Criveti, CTO & STSM, Red Hat Certified Architect in Infrastructure"
-- "Elif Mosessohn-Samedin, Lead DevOps Engineer, Red Hat Certified Architect in Infrastructure Level II"
+- "Mihai Criveti, CTO & STSM, RHCA"
+- "Elif Mosessohn-Samedin, RHCA II"
 date: \today
 
 abstract: |
