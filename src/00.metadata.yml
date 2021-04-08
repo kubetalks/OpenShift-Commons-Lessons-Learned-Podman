@@ -2,9 +2,9 @@
 title: "Lessons Learned Adopting RHEL Container Tools"
 subtitle: "Podman, Buildah, Quay, Skopeo, Clair and S2I"
 author:
-- "Mihai Criveti, CTO & STSM, RHCA"
-- "Elif Mosessohn-Samedin, RHCA II"
-date: \today
+- "Mihai Criveti, CTO & STSM, RHCA, IBM"
+- "Elif Mosessohn-Samedin, RHCA II, Take off Labs"
+#date: \today
 
 abstract: |
   A hands-on demonstration of lessons learned migrating from other container build tools to the RHEL container ecosystem.
