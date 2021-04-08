@@ -1,6 +1,8 @@
 Secure Continuous Delivery with Podman, Buildah, Skopeo and UBI
 ==============================================================
 
+> Lessons learned adopting the Podman toolset.
+
 A hands-on demonstration of lessons learned migrating from other container build tools to the RHEL container ecosystem.
 We aim to explore a set of command-line tools that are able to operate without a container daemon, and namely: Buildah, Podman, Quay and Skopeo.
 
@@ -9,17 +11,20 @@ In a nutshell, Buildah builds, Podman runs, Skopeo transfers container images an
 
 Moreover, we will take a look at best practices for building images that can easily be integrated into a CI/CD Pipeline and vulnerability scanning with Clair, thus replacing previous build tools in workflows.
 
-Understand the impact of SELinux, namespaces and cgroups.
-Move from docker-compose to Podman pods.
-Build container images for OpenShift Container Platform.
-Develop and test Ansible Playbooks / Roles with Podman.
+### Use cases:
+
+- Understand the impact of SELinux, namespaces and cgroups.
+- Move from docker-compose to Podman pods.
+- Build container images for OpenShift Container Platform.
+- Develop and test Ansible Playbooks / Roles with Podman.
+
 
 Speakers
 ---------
 
 ### Mihai CRIVETI
 
-Mihai builds containers for fun and profit, sometimes in the cloud, sometimes in his home datacenter, when the weather is cold. He's also the CTO and Senior Technical Staff Member for Cloud Native and Red Hat Solutions at IBM, where he builds multi-cloud solutions based on Red Hat OpenShift.
+Mihai builds containers for fun and profit, sometimes in the cloud, sometimes in his home datacenter, when the weather is cold. He's also a Red Hat Certified Architect and the CTO and Senior Technical Staff Member for Cloud Native and Red Hat Solutions at IBM, where he builds multi-cloud solutions based on Red Hat OpenShift.
 
 
 ### Elif MOSESSOHN-SAMEDIN
@@ -30,16 +35,20 @@ DevOps (Automation) Engineer with experience in Infrastructure Optimization and 
 Building the documentation
 --------------------------
 
-Building the presnetation requires `pandoc` and `LaTeX` (for PDF output only).
+Building the presentation requires `pandoc` and `LaTeX` (for PDF output only).
 
 As an alternative, a prebuild image with all required tools is provided on quay.io.
 
 https://quay.io/repository/cmihai/docbuilder
 
-Build the documentation typing:
+To build the presentation:
 
 ```bash
+# To build a PowerPoint presentation using pandoc:
 make
+
+# To build a PDF using LaTeX beamer:
+make TRANSFORMATION=pdf
 ```
 
 Note: when installing pandoc, make sure you're using the latest version from: https://pandoc.org/installing.html
